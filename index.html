@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初级vue的使用</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+
+    
+</head>
+<body>
+     <div class="full">
+    <div class="head">
+
+    </div>
+      <div class="footer"></div>
+     </div>
+     <div class="blackboard">
+         <span class="wenzi">
+            初级vue的使用
+         </span>
+         <span class="wuweipeng">
+             吴伟鹏
+         </span>
+     </div>
+     <div class="lianjie">
+         <ul id="baohan">
+             <li>
+                 <a href="https://www.cnblogs.com/"target="_blank">
+                     {{boke[0]}}
+                 </a>
+             </li>
+             <li>
+               <a href="">
+                   {{boke[1]}}
+               </a>
+             </li>
+             <li>
+                 <a href="">
+                     {{boke[2]}}
+                 </a>
+             </li>
+             <li><a href="">
+                 {{boke[3]}}
+             </a>
+             </li>
+             <li>
+                 <a href="">
+                     {{boke[4]}}
+                 </a>
+             </li>
+             <li>
+                 <a href="">
+                     {{boke[5]}}
+                 </a>
+             </li>
+         </ul>
+     </div>
+     <div id="main">
+        
+             <a v-for="(item,index) in arr">
+                 {{index+1}}.{{item}}
+             </a>
+             <div v-for="(item,index) in arr"class="jiantou">
+                 >
+             </div>
+     </div>
+     <div class="first" id="app"  >
+         <img :src="imgArr[index]" alt="">
+         <button class="arrow-l" @click="prev" v-show="index!=0"><</button>
+         <button  class="arrow-r" @click="next" v-show="index<imgArr.length-1">></button>
+     </div>
+     
+       <div id="notebook">
+           {{note}}
+       </div>
+    
+        <div id="section">
+            <input type="text" v-model="inputvalue" @keyup.enter="add">
+            <ul v-show="list.length!=0">
+                <li v-for="(item,index) in list">
+                  {{index+1}}. {{item}}
+                  <button @click="remove(index)">删除</button>
+                </li>
+            </ul>
+            
+            <div v-show="list.length!=0">{{list.length}}.  items left
+                <button @click="clear">
+                    clear
+                </button>
+            </div>
+        </div>
+        <div id="foot">
+            <input type="text" v-model="inp">
+            <div>
+                <img src="../headlogo/头像.jpg" alt="">
+            </div>
+        
+   
+            <ul id="last"> 
+            <li v-for="(item,index) in num">
+             {{item}}
+            </li>
+           </ul>
+        <button @click="fabu">发布</button>
+   </div>
+   <span class="comment">评论</span>
+   <span class="new">最新</span>
+   <span class="xian">|</span>
+   <span class="hot">最热</span>
+        <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+       <script src="index.js"></script>
+       
+</body>
+</html>
