@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一个博客</title>
+    <link rel="stylesheet" href="引用.css">
+    <script src="animate.js"></script>
+    <script src="轮播.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .a {
+            position: absolute;
+            right: 0px;
+            color: black;
+            top: 0px;
+            margin: 15px 0;
+            z-index: 3;
+        }
+
+        body {
+            background: url(背景.jpg);
+            width: 100%;
+            background-repeat: no-repeat;
+
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            min-width: 1000px;
+            background-size: cover;
+            background-position: center 0;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .head {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(18, 81, 195);
+        }
+
+        .logo {
+            height: 100%;
+            float: left;
+        }
+
+        .logo img {
+            height: 100%;
+            margin-left: 70px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .fu {
+            float: left;
+            margin-left: 50px;
+            margin-top: 15px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav li :hover {
+            color: tomato;
+        }
+
+        .b {
+            position: absolute;
+            left: 230px;
+            top: 37px;
+            z-index: 3;
+        }
+
+        .b li {
+            border-top: whitesmoke 1px solid;
+            border-bottom: whitesmoke 1px solid;
+            border-left: coral 2px solid;
+            border-right: coral 2px solid;
+            height: 30px;
+            width: 110px;
+            background-color: white;
+            color: black;
+        }
+
+        .c {
+            position: absolute;
+            top: 35px;
+            left: 350px;
+            z-index: 3;
+        }
+
+        .c li {
+            border-top: whitesmoke 1px solid;
+            border-bottom: whitesmoke 1px solid;
+            border-left: coral 2px solid;
+            border-right: coral 2px solid;
+            height: 30px;
+            width: 110px;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+
+        .d {
+            position: absolute;
+            top: 35px;
+            left: 400px;
+            z-index: 3;
+        }
+
+        .d li {
+            border-top: whitesmoke 1px solid;
+            border-bottom: whitesmoke 1px solid;
+            border-left: coral 2px solid;
+            border-right: coral 2px solid;
+            height: 200px;
+            width: 300px;
+            background-color: white;
+            color: black;
+        }
+
+        .d li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .e {
+            position: absolute;
+            top: 35px;
+            left: 300px;
+            z-index: 3;
+        }
+
+        .e li {
+            border-top: whitesmoke 1px solid;
+            border-bottom: whitesmoke 1px solid;
+            border-left: coral 2px solid;
+            border-right: coral 2px solid;
+            height: 1300px;
+            width: 1000px;
+            background-color: white;
+            color: black;
+
+        }
+
+        .f {
+            position: absolute;
+            top: 35px;
+            left: 700px;
+            z-index: 3;
+        }
+
+        .f li {
+            border-top: whitesmoke 1px solid;
+            border-bottom: whitesmoke 1px solid;
+            border-left: coral 2px solid;
+            border-right: coral 2px solid;
+            height: 30px;
+            width: 110px;
+            background-color: white;
+            color: black;
+            text-align: center;
+
+        }
+
+        .nav ul {
+            display: none;
+        }
+
+        .search input {
+            margin-top: 17px;
+            margin-left:
+                63px;
+            width: 420px;
+            height: 26px;
+            color: gray;
+            padding-left: 30px;
+            font-size: 12px;
+            float: left;
+            border: red solid 1px;
+            border-right: 0;
+        }
+
+        .search button {
+
+            width: 54px;
+            height: 28px;
+            float: left;
+            margin-top: 17px;
+            border: 0px;
+            background-image: url(kk.png);
+
+        }
+
+        .g {
+            width: 160px;
+            height: 40px;
+            float: left;
+            margin-left: 80px;
+            margin-top: 10px;
+        }
+
+        .g div img {
+            height: 40px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .h {
+            height: 20px;
+            width: 100px;
+            margin-top: 50px;
+            position: absolute;
+            top: -30px;
+            left: 1470px;
+            color: seashell;
+        }
+
+        .lunbo {
+            background-color: springgreen;
+            height: 300px;
+            width: 1920px;
+            overflow: hidden;
+        }
+
+        /* 主要问题，如何解决轮播图外溢的问题，为什么overflowhidden没有起想要的效果？ */
+    </style>
+
+<body>
+
+    <div class="head">
+        <div class="logo">
+            <img src="博客.png" alt="">
+        </div>
+        <div>
+            <ul class="nav">
+                <li class="fu"><a href="#">个人标签</a>
+                    <ul class="b">
+                        <li>未来IT业打工人</li>
+                        <li>学习编程中</li>
+                        <li>立志不摆烂</li>
+                        <li>乐观的能</li>
+                        <li>小丑又怎样</li>
+                    </ul>
+                </li>
+                <li class="fu"><a href="#">个人爱好</a>
+                    <ul class="c">
+                        <li>steam</li>
+                        <li>ubisoft</li>
+                        <li>lol</li>
+                        <li>动漫</li>
+                        <li>运动</li>
+                    </ul>
+                </li>
+                <li class="fu"><a href="#">个人相册</a>
+                    <ul class="d">
+                        <li><img src="101.jpg" alt=""></li>
+                        <li><img src="102.jfif" alt=""></li>
+                        <li><img src="103.jpg" alt=""></li>
+                        <li><img src="104.jpg" alt=""></li>
+                        <li><img src="105.jpg" alt=""></li>
+                    </ul>
+                </li>
+                <li class="fu"><a href="#">所读学校</a>
+                    <ul class="e">
+                        <li>
+                            湖北工业大学是一所以工学为主，覆盖工、文、理、艺、经、管、法、教、医等九大学科门类的多科性大学。学校创建于1952年，1984年由原湖北轻工业学院和原湖北农业机械专科学校合并组建成湖北工学院，2004年更名为湖北工业大学。学校是湖北省重点建设高校，被省委省政府定位为“在湖北省高教体系中起龙头示范作用的、水平较高的骨干大学”；拥有丰富的办学层次，具有推荐优秀本科生免试攻读硕士研究生资格和博士学位授予权；2010年获得“全国毕业生就业典型经验高校”称号；2014年,学校整体进入一本高校行列；2012年、2016年连续两次入选国家“中西部高校基础能力建设工程”；2016年入选“全国首批深化创新创业教育改革示范高校”、2018年入选教育部2018年度全国创新创业典型经验高校50强、2021年入选全国文明校园先进学校。
+
+                            学校占地面积1400余亩，校舍建筑面积100余万平方米，拥有完善的教学、科研、文体和后勤服务设施，以及门类齐全的基础实验室和专业实验室，学生公寓均配有空调和开水、热水供应设施。学校图书馆建筑面积4.58万平方米，是湖北省高等学校优秀级图书馆，现有馆藏纸质图书192万余册，电子图书163万余册，电子期刊153万余册。学校建有安全通畅的校园网络、智慧快捷的校务平台。
+
+                            学校现设有机械工程学院、电气与电子工程学院、材料与化学工程学院、生物工程与食品学院、土木建筑与环境学院、计算机学院、艺术设计学院、工业设计学院、经济与管理学院、马克思主义学院、外国语学院、理学院（芯片产业学院）、体育学院、职业技术师范学院、国际学院、底特律绿色工业学院、工程技术学院17个教学单位；图书馆、继续教育学院、信息技术中心、档案馆、期刊社、农机工程研究设计院、农机鉴定站、资产经营管理有限公司、科技园有限责任公司、校医院10个直属单位。学校面向全国31个省、自治区、直辖市招生，现有全日制在校本科学生近2万人，研究生近7000人，国际学生近1000人。
+
+                            学校现有专任教师1400余人。其中，高级职称教师700余人，专职博士、硕士生导师800余人，具有博士学位教师比例达到65%以上。现有国家级人才27人、省级专家人才188人。学校还先后从国内外著名高校、科研院所及大型企事业单位聘请了包括9名国内院士和8名国外院士在内的兼职教授400余人，形成了以国家级人才为领军、省部级人才为中坚、中青年博士教师为骨干的高水平师资队伍。
+
+                            学校现有56个本科专业招生。其中，国家特色专业4个，国家级一流专业建设点20个，教育部“卓越工程师教育培养计划”专业3个、“卓越教师培养计划”专业3个，产学合作协同育人项目295项，湖北省级一流专业建设点10个，湖北省品牌专业8个，湖北省战略性新兴（支柱）产业人才培养计划和“荆楚卓越人才协同育人计划”等专业27个；湖北省优秀教学团队14个，湖北高校省级优秀基层教学组织12个。机械设计制造及其自动化等14个专业通过中国工程教育专业认证或住建部专业评估。建有国家级实验教学示范中心2个、国家工程实践教育中心3个、湖北高校实验教学示范中心10个、湖北高校省级实习实训基地5个、省级虚拟仿真实验教学中心3个；国家级精品视频公开课3门，国家级一流课程6门，省级一流课程38门，省级各类精品视频公开课、精品资源共享课和精品在线开放课程35门；国家级课程思政示范项目1项，省级课程思政示范项目2项。
+
+                            近年来，学校主动对接国家和地方绿色工业发展和传统工业绿色化的战略需求，持续深入实施以绿色工业为主导的“135+”学科发展战略。现有1个湖北省“双一流”建设学科，1个湖北省优势学科，5个湖北省特色学科，4个湖北省重点（培育）学科，4个湖北省优势特色学科群；有2个一级学科博士学位授权点，21个一级学科硕士学位授权点，21个硕士专业学位授权类别；“食品科学与工程、电力电子工程、生物工程”3个学科进入软科“世界一流学科”，“工程学、农业科学”2个学科进入ESI前1%。
+
+                            学校建有1个教育部重点实验室、1个教育部研究生创新中心、1个国家技术转移示范机构、2个博士后科研工作站、13个湖北省研究生工作站、5个湖北省重点实验室、5个湖北省人文社科研究平台、1个湖北省工程实验室、1个省级中试基地、2个湖北省协同创新中心、17个湖北省工程（技术）研究中心、26个省级校企研发中心、41个省级企校联合创新中心、15家产业研究院等各类科研平台。2012年以来，学校承担省部级以上科研项目2000余项，其中国家级项目500余项；出版专著和教材450多部；收录高水平论文2700余篇，其中SCI论文1400余篇；专有授权专利2500余项；获省部级以上科技奖励144项，其中国家奖1项、省级一等奖26项。学校紧紧围绕区域产业发展重大需求和湖北“51020”现代产业体系开展科学研究，与500多家大中型企业有长期合作，科技服务湖北位居省属高校前列；2020年10月，学校作为湖北唯一试点入选国家“赋予科研人员职务科技成果所有权或长期使用权试点单位”，学校的科技成果转化工作受到央视《新闻联播》等重要媒体的关注和专题报道。
+
+                            学校主办、承办有《中国机械工程》《数字农业与智能农机》《湖北工业大学学报》等科技期刊。其中，《中国机械工程》入选EI源刊目录，连续12年荣获“百种中国杰出学术期刊”，多次被评为“中国国际影响力优秀学术期刊”“中国精品科技期刊”“全国百强科技期刊”。
+
+                            在长期的办学历程中，学校积淀了“厚德博学、求实创新”的校训精神，形成了“学生为本，教师至上，自由发展，国际视野”的治学思想，凝练了“质量立校、人才强校、科技兴校、开放活校、依法治校”的办学理念，健全了“党委领导，校长负责，教授治学，民主管理”的现代大学治理体系，人才培养质量、科技服务能力和国际交流合作水平不断提高，社会影响力不断扩大。
+
+                            近五年，学生在各级各类竞赛中成绩优异、实现了历史性突破。其中，学科竞赛获国家级、省部级奖2100余项，在中国“互联网+”大学生创新创业大赛、“挑战杯”中国大学生创业计划竞赛、数学建模、结构设计竞赛等国家级重大竞赛中均获有重要奖项。学校在中国高等教育学会发布的2020年全国普通高校大学生竞赛排行榜中排名第64位、2016-2020年全国普通高校大学生竞赛排行榜第71位。学校体育赛事获得CUBA中国大学生篮球联赛全国十六强、全国大学生乒乓球锦标赛超级组男子单打冠军和女子单打冠军。多年来，毕业生就业率保持在95%以上。学校高度重视大学生创新创业教育，建有大学生创业园、创意集市、省级众创空间，并入选首批“湖北省大学生创业示范基地”，先后涌现出“全国创业英雄十强人物”“全国创业英雄百强人物”等成功创业典型。
+
+                            学校坚持开放办学，确立国际化发展战略，大力实施“教师国际能力提升工程”及“学生国际视野拓展工程”，全方位、宽领域、多层次的国际交流与合作蓬勃发展，是湖北省扩大开放先进单位。先后与美国、加拿大、英国、德国、法国等30多个国家及香港、澳门、台湾等地区的130余所高校和研究机构建立合作关系，中外合作办学机构及项目在读学生近1700人。学校举办的“底特律绿色工业学院”（中美4+0双学位模式）是全国唯一专注于培养国际化绿色工业人才的中外合作办学机构。学校聘任外籍院士8人，现有常任外籍专家、教师30余名，是国家留学基金委“创新型人才国际合作培养项目”“青年骨干教师出国研修项目”等师生公派出国留学项目资格高校，师生年均出国（境）交流研修人数居省属高校前列。学校通过了全国高等学校来华留学质量认证；获批设有国家科技部/教育部学科创新引智基地（国家级“111基地”）2个，另获批设有湖北省引智创新示范基地3个、湖北省国际科技合作基地2个。土木建筑与环境学院获批全省首个省级国际化示范学院。学校成立有“中英超快激光加工技术研究中心”“中法岩土力学与混凝土材料研究中心”等20余个国际科研合作平台。国家科技部授权学校举办有“TEFL
+                            in China”外籍教师执业资格培训项目武汉中心。
+
+                            学校多次获得各类表彰，被授予“全国文明校园先进学校”“全国普通高等学校毕业生就业工作先进集体”“湖北省美誉高校”“湖北省最佳文明单位”“科技服务湖北先进单位”“湖北省外事（侨务）工作先进单位”“湖北省依法治校示范校”“湖北人才工作先进单位”“全省先进基层党组织”“湖北省党建工作先进单位”“省委先进党委中心组”“省属高校‘五好’领导班子创建工作先进单位”“湖北省十佳书香校园”等荣誉称号。
+
+                            当前，学校以习近平新时代中国特色社会主义思想为指导，深入学习贯彻习近平总书记关于教育的重要论述，坚持社会主义办学方向，全面加强党的领导，全面贯彻党的教育方针，全面落实立德树人根本任务，全面提升办学治校能力水平，全面贯彻学校第三次党代会要求，坚持以师生为中心，以特色高质量发展为主线，以协同发展为重要途径，以改革创新为根本动力，以“三步走”发展战略为努力方向，以争创“双一流”为强力抓手，确立一流发展目标、建设一流学科专业、打造一流师资队伍，明确“四个聚焦”“四个融合”“四大工程”和“四个走在前列”的“四个四”发展思路，坚持“立足湖北、服务工业”，积极融入“一主引领、两翼驱动、全域协同”区域发展布局，着力培养具有国际视野和绿色理念、创新创业及实践能力强的高素质应用型人才，努力在人才培养、科学研究、社会服务、文化传承创新和国际交流合作上形成特色，奋力开创绿色工业学科特色鲜明的高水平工业大学建设新局面，为湖北“建成支点、走在前列、谱写新篇”作出贡献。
+
+
+
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="fu"><a href="#">所学技术</a>
+                    <ul class="f">
+                        <li>html</li>
+                        <li>css</li>
+                        <li>javascript</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" value="搜索功能暂未开启哦">
+            <button></button>
+        </div>
+        <div class="g">
+            <div>
+                <img src="头像.jpg" alt="">
+            </div>
+            <div class="h">很多没有学会</div>
+            <button class="a">深色模式</button>
+        </div>
+
+    </div>
+
+    <div class="lunbo">
+        <a href="javascript:;" class="arrow-l">
+            < </a>
+                <a href="javascript:;" class="arrow-r">
+                    >
+                </a>
+                <ul>
+                    <li>
+                        <a href="#"><img src="106.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="107.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="108.jfif" alt=""></a>
+                    </li>
+
+                </ul>
+    </div>
+    <div class="footer">
+        <div class="video">
+            <video src="shiping.mp4" autoplay='autoplay' muted='muted' controls='controls' loop='loop'></video>
+        </div>
+        <div class="liuyan">
+            <form> <textarea cols="100" rows="10"></textarea></form>
+            <button class="fabu">发布</button>
+        </div>
+        <ul class="j">
+
+        </ul>
+        <div class="biaozhi">
+            <img src="index.png" alt="">
+        </div>
+        <div class="liuyan1">
+            <img src="liuyan.png" alt="">
+        </div>
+        <div class="wenzi">技术交流区，快来发布留言吧</div>
+    </div>
+         <div class="picture">感觉思路有点乱,</br>很多问题没解决,</br>先这样了。</div>
+    <script>
+        let btn = document.querySelector('.a');
+        let bodyEle = document.body;
+        let flag = 0;
+        let video1 = document.querySelector('.video');
+        let liuyan1 = document.querySelector('.liuyan');
+        let wenzi1 = document.querySelector('.wenzi');
+        let j1 = document.querySelector('.j');
+        let biaodan = document.querySelector('form');
+        let text1 = biaodan.children[0];
+        btn.onclick = function () {
+            if (flag == 0) {
+                bodyEle.style.backgroundImage = 'url(100.jpg)';
+                btn.innerHTML = '浅色模式';
+                bodyEle.style.backgroundColor = 'black';
+                video1.style.backgroundImage = 'url(112.jpg)';
+                liuyan1.style.backgroundImage = 'url(113.jfif)';
+                j1.style.backgroundImage = 'url(114.jfif)';
+                wenzi1.style.color = 'white';
+                text1.style.backgroundColor = 'rgb(68, 87, 96)';
+                text1.style.color = ' rgb(161, 171, 175)';
+                flag = 1;
+            }
+            else if (flag == 1) {
+                bodyEle.style.backgroundImage = 'url(背景.jpg)';
+                btn.innerHTML = '深色模式';
+                bodyEle.style.backgroundColor = 'white';
+                video1.style.backgroundImage = 'url(110.jpg)';
+                liuyan1.style.backgroundImage = 'url(留言.jpg)';
+                j1.style.backgroundImage = 'url(111.jpg)';
+                wenzi1.style.color = 'black';
+                text1.style.color = ' rgb(68,87,96)';
+                text1.style.backgroundColor = 'rgb(161,171,175)';
+                flag = 0;
+            }
+        }
+        let nav = document.querySelector('.nav');
+        let lis = nav.children;
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                this.children[1].style.display = 'block';
+            }
+            lis[i].onmouseout = function () {
+                this.children[1].style.display = 'none';
+            }
+        }
+        let fabu = document.querySelector('.fabu');
+        let text = document.querySelector('textarea');
+        let j = document.querySelector('.j');
+        fabu.onclick = function () {
+            if (text.value == '') {
+                alert('您没有输入');
+                return false;
+            }
+            else {
+                let tianjia = document.createElement('textarea');
+                tianjia.innerText = text.value;
+                text.value='';
+                j.insertBefore(tianjia, j.children[0]);
+                for (let k = 0; k < j.children.length; k++) {
+                    let twice = 2 * k + 2;
+                    let third = 2 * k + 1;
+                    let as = j.children[twice];
+                    let ps = j.children[third];
+                    as.onclick = function () {
+                        j.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        let j2 = document.querySelector('.j');
+        let btn = document.querySelector('.a');
+        let fg = 0;
+        btn.onclick = function () {
+            for (let i = 0; i < j2.children.length; i++) {
+                if (fg == 0) {
+                    j2.children[i].style.backgroundColor = 'rgb(68, 87, 96)';
+                    j2.children[i].style.color = 'rgb(161,171,175)';
+                    fg = 1;
+                }
+                else if (fg == 1) {
+                    j2.children[i].style.backgroundColor = 'rgb(161,171,175)';
+                    j2.children[i].style.color = 'rgb(68,87,96)';
+                    fg = 0;
+                }
+            }
+        }
+    </script>
+    <!--  这个js无效，要找解决方法。 -->
+    <script>
+        let biaozhi2 = document.querySelector('.biaozi');
+        let biaozhi3 = document.querySelector('.liuyan1');
+        let btn = document.querySelector('.a');
+        let fg = 0;
+        btn.onclick = function () {
+            if (fg == 0) {
+                let item = biaozhi2.children.style;
+                biaozhi2.children.style = biaozhi3.children.style;
+                biaozhi3.children.style = item;
+                fg = 1;
+            }
+            else if (fg == 1) {
+                let item = biaozhi3.children.style;
+                biaozhi3.children.style = biaozhi2.children.style;
+                biaozhi2.children.style = item;
+                fg = 0;
+            }
+        }
+    </script>
+    <!--  这个js无效，要找解决方法。如何转换两个logo的位置 -->
+</body>
+
+</html>

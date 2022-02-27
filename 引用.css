@@ -1,0 +1,120 @@
+.arrow-l{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: rgba(0, 0, 0, .3);
+    top: 175px;
+    text-align: center;
+    display: none;
+    z-index: 2;
+}
+.arrow-r{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: rgba(0, 0, 0, .3);
+    top: 175px;
+    left: 1880px;
+    text-align: center;
+    display: none;
+    z-index: 2;
+}
+.lunbo ul li a img {
+  width: 1920px;
+  height: 300px;
+  overflow: hidden;
+}
+.lunbo ul {
+    width: 450%;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    overflow: hidden;
+}
+.lunbo ul li {
+    float: left;
+    overflow: hidden;
+}
+.footer{
+    width: 1200px;
+    background-color: rgb(68, 87, 96);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.video {
+    width: 100%;
+    height: 400px;
+    background-color: rosybrown;
+    background: url(110.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+.liuyan {
+    width: 100%;
+    background-color: royalblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(留言.jpg);
+}
+.liuyan form textarea {
+    color: rgb(68, 87, 96);
+    font-size: 20px;
+    margin-left: 90px;
+    margin-top: 70px;
+    border: whitesmoke solid 1px;
+    background-color: rgb(161, 171,175);
+}
+.liuyan button {
+    float: right;
+    margin-top: -25px;
+    margin-right: 60px;
+}
+.j{
+    background: url(111.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.j textarea {
+    height: 200px;
+    width: 1014px;
+    background-color: rgb(161, 171, 175);
+    display: block;
+    margin-left: 94px;
+    color: rgb(68,87, 96);
+    font-size: 20px;
+    border: whitesmoke solid 1px;
+}
+.biaozhi img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 320px;
+    top: 700px;
+}
+.wenzi{
+    position: absolute;
+    top: 750px;
+    left: 500px;
+    font-size: 50px;
+
+}
+.liuyan1 img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 320px;
+    top: 700px;
+}
+.picture {
+    font-size: 50px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    color: whitesmoke;
+}
